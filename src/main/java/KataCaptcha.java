@@ -34,4 +34,8 @@ public class KataCaptcha {
     public String getRightOperandSecondPattern() {
         return stringNumber[rightOperand - 1];
     }
+
+    public String concatString() {
+        return String.join(" ", this.getLeftOperandFirstPattern(),this.getOperator() ,this.getRightOperandFirstPattern());
+    }
 }

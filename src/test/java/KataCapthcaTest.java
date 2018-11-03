@@ -91,5 +91,24 @@ public class KataCapthcaTest {
         Assert.assertEquals("One", actual);
     }
 
+    @Test
+    public void secondPatternRightShouldBeNine() throws Exception {
+        KataCaptcha captcha = new KataCaptcha(2, leftOperandDummy, operatorDummy, 9);
+        String actual = captcha.getRightOperandSecondPattern();
+        Assert.assertEquals("Nine", actual);
+    }
 
+    @Test
+    public void firstPatternShouldBeOneplus1() throws Exception {
+        KataCaptcha captcha = new KataCaptcha(1, 1,1,1);
+        String actual = captcha.concatString();
+        Assert.assertEquals("One + 1", actual);
+    }
+
+    @Test
+    public void firstPatternShouldBeNineMinus9() throws Exception {
+        KataCaptcha captcha = new KataCaptcha(1, 9,3,9);
+        String actual = captcha.concatString();
+        Assert.assertEquals("Nine - 9", actual);
+    }
 }
