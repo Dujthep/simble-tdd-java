@@ -18,4 +18,7 @@ public class KataCaptcha {
         return stringNumber[leftOperand - 1];
     }
 
+    public String getRightOperand() {
+        return stringNumber[rightOperand - 1];
+    }
 }
