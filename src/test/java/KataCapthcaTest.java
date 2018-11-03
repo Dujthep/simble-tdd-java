@@ -13,6 +13,6 @@ public class KataCapthcaTest {
     @Test
     public void resultShouldBeOnePlus1() throws Exception {
         KataCaptcha captcha = new KataCaptcha(1 ,1,1,1);
-        Assert.assertEquals("One + 1", captcha.concatString());
+        Assert.assertEquals("One + 1 = 2", captcha.concatString());
     }
 }

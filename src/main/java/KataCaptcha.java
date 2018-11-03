@@ -31,6 +31,6 @@ public class KataCaptcha {
     }
 
     public String concatString() {
-        return String.join(" ", this.getLeft().toString(), this.getOperator().toString(), this.getRight().toString());
+        return String.join(" ", this.getLeft().toString(), this.getOperator().toString(), this.getRight().toString()).concat(" = ").concat(String.valueOf(calculateResult()));
     }
 }
