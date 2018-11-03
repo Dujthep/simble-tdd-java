@@ -3,6 +3,7 @@ public class KataCaptcha {
     int pattern, leftOperand, operator, rightOperand;
 
     String stringNumber[] = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+    String operators[] = {"+", "*", "-"};
 
     public KataCaptcha(int pattern, int leftOperand, int operator, int rightOperand) {
         this.pattern = pattern;
@@ -19,6 +20,10 @@ public class KataCaptcha {
     }
 
     public String getRightOperand() {
-        return stringNumber[rightOperand - 1];
+       return  this.rightOperand +"";
+    }
+
+    public String getOperator() {
+        return operators[operator-1];
     }
 }

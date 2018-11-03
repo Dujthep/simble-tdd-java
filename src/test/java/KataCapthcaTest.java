@@ -3,34 +3,70 @@ import org.junit.Test;
 
 public class KataCapthcaTest {
 
-    final int operator = 1;
-    final int rightOperand = 1;
+    final int operatorDummy = 1;
+    final int rightOperandDummy = 1;
+    final int leftOperandDummy = 1;
 
     @Test
     public void firstPatternLeftOperandShouldBeOne() throws Exception {
-        KataCaptcha capthca = new KataCaptcha(rightOperand, rightOperand, operator, rightOperand);
+        KataCaptcha capthca = new KataCaptcha(1, 1, operatorDummy, rightOperandDummy);
         String actual = capthca.getLeftOperand();
         Assert.assertEquals("One", actual);
     }
 
     @Test
     public void firstPatternLeftOperandShouldBeFour() throws Exception {
-        KataCaptcha capthca = new KataCaptcha(1, 4, operator, rightOperand);
+        KataCaptcha capthca = new KataCaptcha(1, 4, operatorDummy, rightOperandDummy);
         String actual = capthca.getLeftOperand();
         Assert.assertEquals("Four", actual);
     }
 
     @Test
     public void firstPatterLeftOperandShouldBeNine() throws Exception {
-        KataCaptcha capthca = new KataCaptcha(1, 9, operator, rightOperand);
+        KataCaptcha capthca = new KataCaptcha(1, 9, operatorDummy, rightOperandDummy);
         String actual = capthca.getLeftOperand();
         Assert.assertEquals("Nine", actual);
     }
 
     @Test
     public void firstPatternRightOperandShouldBeOne() throws Exception {
-        KataCaptcha capthca = new KataCaptcha(1, 1, operator, 1);
+        KataCaptcha capthca = new KataCaptcha(1, leftOperandDummy, operatorDummy, 1);
         String actual = capthca.getRightOperand();
-        Assert.assertEquals("One",actual);
+        Assert.assertEquals("1",actual);
+    }
+
+    @Test
+    public void firstPatternRigthOperandShouldBeFive(){
+        KataCaptcha capthca = new KataCaptcha(1, leftOperandDummy, operatorDummy, 5);
+        String actual = capthca.getRightOperand();
+        Assert.assertEquals("5",actual);
+    }
+
+    @Test
+    public void firstPatternRightOperandShouldBeNine(){
+        KataCaptcha captcha = new KataCaptcha(    1, leftOperandDummy, operatorDummy, 9);
+        String actual = captcha.getRightOperand();
+        Assert.assertEquals("9",actual);
+    }
+
+    @Test
+    public void operator1ShouldBePlus(){
+        KataCaptcha captcha = new KataCaptcha(1, leftOperandDummy, 1, rightOperandDummy);
+        String actual = captcha.getOperator();
+        Assert.assertEquals("+", actual);
+    }
+
+    @Test
+    public void operator2ShouldBeMultiply(){
+        KataCaptcha captcha = new KataCaptcha(1,leftOperandDummy, 2, rightOperandDummy);
+        String actual = captcha.getOperator();
+        Assert.assertEquals("*", actual);
+    }
+
+    @Test
+    public void operator3ShouldBeMinus(){
+        KataCaptcha captcha = new KataCaptcha(1, leftOperandDummy,3, rightOperandDummy);
+        String actual = captcha.getOperator();
+        Assert.assertEquals("-", actual);
     }
 }
