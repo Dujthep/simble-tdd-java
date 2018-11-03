@@ -50,27 +50,6 @@ public class KataCapthcaTest {
     }
 
     @Test
-    public void operator1ShouldBePlus() {
-        KataCaptcha captcha = new KataCaptcha(1, leftOperandDummy, 1, rightOperandDummy);
-        String actual = captcha.getOperator();
-        Assert.assertEquals("+", actual);
-    }
-
-    @Test
-    public void operator2ShouldBeMultiply() {
-        KataCaptcha captcha = new KataCaptcha(1, leftOperandDummy, 2, rightOperandDummy);
-        String actual = captcha.getOperator();
-        Assert.assertEquals("*", actual);
-    }
-
-    @Test
-    public void operator3ShouldBeMinus() {
-        KataCaptcha captcha = new KataCaptcha(1, leftOperandDummy, 3, rightOperandDummy);
-        String actual = captcha.getOperator();
-        Assert.assertEquals("-", actual);
-    }
-
-    @Test
     public void secondPatternLeftShouldBe1() throws Exception {
         KataCaptcha captcha = new KataCaptcha(2, 1, operatorDummy, rightOperandDummy);
         String actual = captcha.getLeftOperandSecondPattern();

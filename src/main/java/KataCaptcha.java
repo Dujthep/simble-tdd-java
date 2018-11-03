@@ -27,8 +27,8 @@ public class KataCaptcha {
         return String.valueOf(this.rightOperand);
     }
 
-    public String getOperator() {
-        return operators[operator - 1];
+    public OperatorCaptcha getOperator() {
+        return new OperatorCaptcha(this.operator);
     }
 
     public String getRightOperandSecondPattern() {
@@ -36,11 +36,11 @@ public class KataCaptcha {
     }
 
     public String concatStringFirstPattern() {
-        return String.join(" ", this.getLeftOperandFirstPattern(), this.getOperator(), this.getRightOperandFirstPattern());
+        return String.join(" ", this.getLeftOperandFirstPattern(), this.getOperator().toString(), this.getRightOperandFirstPattern());
     }
 
     public String concatStringSecondPattern() {
-        return String.join(" ", this.getLeftOperandSecondPattern(), this.getOperator(), this.getRightOperandSecondPattern());
+        return String.join(" ", this.getLeftOperandSecondPattern(), this.getOperator().toString(), this.getRightOperandSecondPattern());
     }
 
     public int calculateResult() {
