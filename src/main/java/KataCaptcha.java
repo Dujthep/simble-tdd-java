@@ -15,15 +15,19 @@ public class KataCaptcha {
     public static void main(String[] args) {
     }
 
-    public String getLeftOperand() {
+    public String getLeftOperandSecondPattern() {
+        return String.valueOf(this.leftOperand);
+    }
+
+    public String getLeftOperandFirstPattern() {
         return stringNumber[leftOperand - 1];
     }
 
     public String getRightOperand() {
-       return  this.rightOperand +"";
+        return String.valueOf(this.rightOperand);
     }
 
     public String getOperator() {
-        return operators[operator-1];
+        return operators[operator - 1];
     }
 }
