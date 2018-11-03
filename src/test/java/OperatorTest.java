@@ -13,4 +13,19 @@ public class OperatorTest {
         Assert.assertEquals("+",actual);
 
     }
+
+    @Test
+    public void operatorShouldBeMultiply() throws Exception {
+        OperatorCaptcha operator = new OperatorCaptcha(2);
+        String actual = operator.toString();
+        Assert.assertEquals("*",actual);
+    }
+
+    @Test
+    public void operatorShouldBeMinus() throws Exception {
+        OperatorCaptcha operator = new OperatorCaptcha(3);
+        String actual = operator.toString();
+        Assert.assertEquals("-",actual);
+
+    }
 }
