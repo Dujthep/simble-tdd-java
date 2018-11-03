@@ -16,4 +16,11 @@ public class KataCapthcaTest {
         String actual = capthca.getLeftOperand();
         Assert.assertEquals("Two", actual);
     }
+
+    @Test
+    public void firstPatterLeftOperandShouldBeNine() throws Exception {
+        KataCaptcha capthca = new KataCaptcha(1, 9, 1, 1);
+        String actual = capthca.getLeftOperand();
+        Assert.assertEquals("Nine", actual);
+    }
 }

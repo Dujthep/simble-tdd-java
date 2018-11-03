@@ -1,7 +1,7 @@
 public class KataCaptcha {
 
     int pattern, leftOperand, operator, rightOperand;
-    String stringNumber[] = {"One", "Two", "Three", "Four"};
+    String stringNumber[] = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
     String output;
     String leftString;
