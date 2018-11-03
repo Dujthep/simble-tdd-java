@@ -11,10 +11,10 @@ public class KataCapthcaTest {
     }
 
     @Test
-    public void firstPatternLeftOperandShouldBeTwo() throws Exception {
-        KataCaptcha capthca = new KataCaptcha(1, 2, 1, 1);
+    public void firstPatternLeftOperandShouldBeFour() throws Exception {
+        KataCaptcha capthca = new KataCaptcha(1, 4, 1, 1);
         String actual = capthca.getLeftOperand();
-        Assert.assertEquals("Two", actual);
+        Assert.assertEquals("Four", actual);
     }
 
     @Test
