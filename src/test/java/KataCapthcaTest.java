@@ -31,21 +31,21 @@ public class KataCapthcaTest {
     @Test
     public void firstPatternRightOperandShouldBe1() throws Exception {
         KataCaptcha capthca = new KataCaptcha(1, leftOperandDummy, operatorDummy, 1);
-        String actual = capthca.getRightOperand();
+        String actual = capthca.getRightOperandFirstPattern();
         Assert.assertEquals("1", actual);
     }
 
     @Test
     public void firstPatternRigthOperandShouldBe5() {
         KataCaptcha capthca = new KataCaptcha(1, leftOperandDummy, operatorDummy, 5);
-        String actual = capthca.getRightOperand();
+        String actual = capthca.getRightOperandFirstPattern();
         Assert.assertEquals("5", actual);
     }
 
     @Test
     public void firstPatternRightOperandShouldBe9() {
         KataCaptcha captcha = new KataCaptcha(1, leftOperandDummy, operatorDummy, 9);
-        String actual = captcha.getRightOperand();
+        String actual = captcha.getRightOperandFirstPattern();
         Assert.assertEquals("9", actual);
     }
 
@@ -86,6 +86,10 @@ public class KataCapthcaTest {
 
     @Test
     public void secondPatternRightShouldBeOne() throws Exception {
-
+        KataCaptcha captcha = new KataCaptcha(2, leftOperandDummy, operatorDummy, 1);
+        String actual = captcha.getRightOperandSecondPattern();
+        Assert.assertEquals("One", actual);
     }
+
+
 }

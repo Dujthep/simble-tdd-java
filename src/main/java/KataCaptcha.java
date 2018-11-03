@@ -23,11 +23,15 @@ public class KataCaptcha {
         return stringNumber[leftOperand - 1];
     }
 
-    public String getRightOperand() {
+    public String getRightOperandFirstPattern() {
         return String.valueOf(this.rightOperand);
     }
 
     public String getOperator() {
         return operators[operator - 1];
+    }
+
+    public String getRightOperandSecondPattern() {
+        return stringNumber[rightOperand - 1];
     }
 }
